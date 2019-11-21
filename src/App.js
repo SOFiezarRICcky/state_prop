@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Materi from './props/Prop';
+import Kursus from './state/State';
+import './props/style.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapperapp">
+      <Kursus />
+      <hr />
+      <p>Contoh State</p>
+      <Materi img={require('./props/seo1.png')} des="belajar seo" harga="120000" />
+      <Materi img={require('./props/seo2.jpg')} des="belajar SEO 2" harga="400000" />
+      <Materi img={require('./props/seo3.jpg')} des="belajar React Js" harga="50000" />
     </div>
   );
 }
